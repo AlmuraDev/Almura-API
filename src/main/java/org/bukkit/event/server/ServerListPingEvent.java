@@ -11,7 +11,7 @@ public class ServerListPingEvent extends ServerEvent {
     private static final HandlerList handlers = new HandlerList();
     private final InetAddress address;
     private String motd;
-    private final int numPlayers;
+    private int numPlayers; // Almura - private final -> private
     private int maxPlayers;
 
     public ServerListPingEvent(final InetAddress address, final String motd, final int numPlayers, final int maxPlayers) {
@@ -83,4 +83,16 @@ public class ServerListPingEvent extends ServerEvent {
     public static HandlerList getHandlerList() {
         return handlers;
     }
+
+    // Almura Start
+    /**
+     * Set the number of online players returned to the pinger
+     *
+     * @param numPlayers the new amount of online players
+     */
+
+    public void setNumPlayers(int numPlayers){
+        this.numPlayers = numPlayers;
+    }
+    // Almura End
 }

@@ -709,4 +709,20 @@ public interface Server extends PluginMessageRecipient {
      * @return the scoreboard manager or null if no worlds are loaded.
      */
     ScoreboardManager getScoreboardManager();
+
+    // Almura Start
+    /**
+     * Dynamically change the number of online players without Reflect Hacks.
+     *
+     * @param max
+     */
+    public void setMaxPlayers(int max);
+
+    /**
+     * Dynamically change the MOTD rather than doing it on an event
+     *
+     * @param motd
+     */
+    public void setMotd(String motd);
+    // Almura End
 }

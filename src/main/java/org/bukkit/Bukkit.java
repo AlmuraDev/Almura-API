@@ -654,4 +654,20 @@ public final class Bukkit {
     public static ScoreboardManager getScoreboardManager() {
         return server.getScoreboardManager();
     }
+
+    // Almura Start
+    /**
+     * @see Server#setMaxPlayers(int)
+     */
+    public static void setMaxPlayers(int max) {
+        server.setMaxPlayers(max);
+    }
+
+    /**
+     * @see Server#setMotd(String)
+     */
+    public static void setMotd(String motd) {
+        server.setMotd(motd);
+    }
+    // Almura End
 }
