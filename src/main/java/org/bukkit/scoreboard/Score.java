@@ -48,4 +48,25 @@ public interface Score {
      *     {@link Objective#unregister() unregistered}
      */
     Scoreboard getScoreboard();
+
+    // Almura Start
+    /**
+     * Checks if this score is set.
+     *
+     * @return true if this score is set.
+     * @throws IllegalStateException if the associated objective has been
+     *     unregistered
+     */
+    boolean isSet() throws IllegalStateException;
+
+    /**
+     * Resets this score.
+     * <p>
+     * After calling this, Score.isSet() will return false.
+     *
+     * @throws IllegalStateException if the associated objective has been
+     *     unregistered
+     */
+    void reset() throws IllegalStateException;
+    // Almura End
 }
